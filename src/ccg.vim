@@ -16,7 +16,6 @@ function! b:app.start() abort
 
   let self.scene            = v:null
   let self.n_wins_by_player = {'o': 0, 'x': 0}
-  let self.popup_winid      = popup_winid
   let self.canvas           = s:new_canvas(33, 9)
   let self.first_turn       = v:null
   let self.current_turn     = v:null
@@ -25,6 +24,7 @@ function! b:app.start() abort
   let self.board_cursor_y   = v:null
   let self.current_result   = v:null
   let self.continue_game    = v:null
+  let self.popup_winid      = popup_winid
 
   call self.switch_to_game('o')
   call self.update_screen()
