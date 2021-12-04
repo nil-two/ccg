@@ -56,7 +56,6 @@ function! b:app.start() abort
   let self.current_result   = v:null
   let self.continue_game    = v:null
   let self.popup_winid      = popup_winid
-
   call self.switch_to_game('o')
   call self.update_screen()
 endfunction
