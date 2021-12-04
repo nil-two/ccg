@@ -32,13 +32,10 @@ appscript() {
 let b:app = {}
 
 function! b:app.start() abort
-  setlocal buftype=nofile
-  setlocal bufhidden=hide
-  setlocal noswapfile
   setlocal shortmess+=I
   setlocal t_ve=
-  highlight EndOfBuffer ctermfg=0
 
+  highlight EndOfBuffer ctermfg=0
   call popup_clear()
   let popup_winid = popup_create('', {})
   call win_execute(popup_winid, 'set wincolor=none')

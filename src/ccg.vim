@@ -1,9 +1,6 @@
 let b:app = {}
 
 function! b:app.start() abort
-  setlocal buftype=nofile
-  setlocal bufhidden=hide
-  setlocal noswapfile
   setlocal shortmess+=I
   setlocal t_ve=
 
