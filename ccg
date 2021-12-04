@@ -10,19 +10,19 @@ options:
       --help   print usage and exit
 
 keys:
-  game:
-    h    <Left>    move cursor to left
-    j    <Down>    move cursor to bottom
-    k    <Up>      move cursor to top
-    l    <Right>   move cursor to right
-    <CR> <Space>   mark cell
-  result:
-    h    <Left>    toggle continuation
-    l    <Right>   toggle continuation
-    <CR> <Space>   select continuation
-  common:
-    q              finish game and exit
-    <C-c>          finish game (for debug)
+  ... in game ...
+  h    <Left>    move cursor to left
+  j    <Down>    move cursor to bottom
+  k    <Up>      move cursor to top
+  l    <Right>   move cursor to right
+  <CR> <Space>   mark cell
+  ... in result ...
+  h    <Left>    toggle continuation
+  l    <Right>   toggle continuation
+  <CR> <Space>   select continuation
+  ... in all ...
+  q              finish game and exit
+  <C-c>          finish game (for debug)
 EOF
 }
 
@@ -303,7 +303,7 @@ call b:app.start()
 EOF
 }
 
-while [[ $# -ge 1 ]]; do
+while [[ $# -gt 0 ]]; do
   opt=$1
   shift
   case $opt in
@@ -324,5 +324,4 @@ while [[ $# -ge 1 ]]; do
       ;;
   esac
 done
-
 vim -u NONE -i NONE -NnS <(appscript) < /dev/tty > /dev/tty
