@@ -55,7 +55,7 @@ Installation
 2. Make `ccg` executable.
 
 ```
-$ curl -L https://raw.githubusercontent.com/kusabashira/ccg/master/ccg > ~/bin/ccg
+$ curl -L https://raw.githubusercontent.com/nil2nekoni2/ccg/master/ccg > ~/bin/ccg
 $ chmod +x ~/bin/ccg
 ```
 
